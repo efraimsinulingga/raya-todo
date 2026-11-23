@@ -47,7 +47,7 @@ function App() {
 
   const handleEdit = (todo: Todo) => {
     setEditedTask(todo)
-    setFormInput({ task: todo.task, notes: todo.notes })
+    setFormInput({ task: todo.task, notes: todo.notes ?? "" })
     setDrawerOpen(true)
   }
 

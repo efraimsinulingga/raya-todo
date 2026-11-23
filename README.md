@@ -49,3 +49,6 @@ npm run dev
 
 ### 4. Buka di Browser
 Setelah server berhasil berjalan, buka link yang muncul di terminal (biasanya [http://localhost:5173](http://localhost:5173)) pada browser Anda.
+
+### LINK DEMO
+[🌐 Lihat Demo](https://raya-todo.vercel.app)
