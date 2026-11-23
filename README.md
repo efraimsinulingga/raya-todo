@@ -1,75 +1,51 @@
-# React + TypeScript + Vite
+# Raya To-Do List (Technical Test)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi **Raya To-Do** adalah aplikasi manajemen tugas (*To-Do List*) berbasis web yang dibangun sebagai bagian dari *technical test*. Aplikasi ini mengimplementasikan operasi CRUD (Create, Read, Update, Delete) serta fitur pencarian interaktif dan responsif.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Fitur Utama
 
-## React Compiler
+- **Tampilkan Daftar Tugas (Read):** Menampilkan daftar tugas lengkap dengan catatan detail dan status penyelesaian.
+- **Tambah Tugas Baru (Create):** Menambahkan tugas baru beserta catatan melalui form drawer interaktif.
+- **Edit Tugas (Update):** Memperbarui nama tugas maupun catatan pada tugas yang sudah ada.
+- **Hapus Tugas (Delete):** Menghapus tugas dari daftar melalui menu aksi.
+- **Tandai Selesai (Toggle Status):** Mengubah status tugas menjadi selesai (*completed*) atau belum selesai dengan indikator teks coret (*strikethrough*).
+- **Pencarian Real-Time (Search):** Memfilter tugas berdasarkan nama tugas secara instan serta menampilkan jumlah tugas yang ditemukan.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework / Library:** React 19
+- **Bahasa Pemrograman:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4
+- **Komponen UI & Ikon:** Base UI / Shadcn UI components, Hugeicons
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 💻 Cara Menjalankan Aplikasi (`npm run dev`)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Pastikan sudah menginstal **Node.js** (versi 18+ direkomendasikan) dan **npm**
 
+### 1. Masuk ke Direktori Proyek
+Buka terminal dan arahkan ke folder proyek:
+```bash
+cd raya-todo
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+### 2. Install Dependensi
+Jalankan perintah berikut untuk menginstal *dependencies*:
+```bash
+npm install
 ```
+
+### 3. Jalankan Server Development
+Jalankan perintah berikut untuk memulai server lokal:
+```bash
+npm run dev
+```
+
+### 4. Buka di Browser
+Setelah server berhasil berjalan, buka link yang muncul di terminal (biasanya [http://localhost:5173](http://localhost:5173)) pada browser Anda.
